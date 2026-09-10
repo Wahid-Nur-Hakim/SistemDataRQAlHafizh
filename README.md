@@ -1,4 +1,4 @@
-# SistemDataRQAlHafizh
+# Sistem Data RQ AlHafizh
 
 Nama : Wahid Nur Hakim
 
@@ -31,3 +31,35 @@ Tampilan ini menggambarkan alur penghapusan data santri dari sistem melalui opsi
 <img width="673" height="543" alt="image" src="https://github.com/user-attachments/assets/4ea54c85-51e4-49b5-b77f-bf7821a92f14" />
 
 Gambar di atas memperlihatkan alur pembaruan data kelas santri melalui opsi menu nomor 4 dengan memilih nomor santri dan memasukkan kode kelas baru hingga sistem menampilkan konfirmasi berhasil. Fungsi Update pada class Kelas Mengaji pun kurang lebih memiliki alur yang sejenis, di mana pengguna dapat memilih kelas tertentu untuk memperbarui informasi data di dalamnya, seperti mengubah nama kelas, pengajar, maupun kapasitas kelas.
+
+# Acces Modifier
+
+Penggunaan private bertujuan agar data tidak diakses atau diubah secara langsung dari luar class. Data hanya bisa diakses melalui method yang disediakan, seperti getter dan setter. 
+
+Contoh penerapannya dapat dilihat pada class santri
+
+<img width="342" height="109" alt="image" src="https://github.com/user-attachments/assets/d1647142-e0dc-4eb5-91e2-6b7d4656174e" />
+
+Pada class santri, atribut nama, umur, no.telp wali, kelas mengaji tidak dapat diubah secara langsung dari class lain. Hal ini berupaya untuk menjaga keamanan serta konsistensi data santri.
+
+# Enclapsulation
+
+Enclapsulation adalah mengelompokkan informasi dan menyembunyikan data “sensitif” dari user.
+
+Tujuan Utama Enkapsulasi mencegah data agar tidak diubah sembarangan atau bernilai tidak valid dari luar program.
+
+Untuk contoh penerapannya
+
+<img width="761" height="47" alt="image" src="https://github.com/user-attachments/assets/17411c2f-89d6-4568-869a-aaa02ca17c8c" />
+
+Gambar tersebut diterapkan saat enclapsulation pada pembaruan kelas santri melalui method setKelasMengaji(). Program mengambil data santri dan kelas yang dipilih, lalu mengubah kelas santri menggunakan setter. Hal ini membuat perubahan data tetap terkontrol dan menjaga keamanan atribut kelasMengaji yang bersifat private.
+
+# Validasi Input
+
+Validasi input diterapkan pada beberapa bagian program untuk memastikan data yang dimasukkan pengguna sesuai dengan ketentuan. Validasi dilakukan menggunakan perulangan while (true) sehingga pengguna harus memasukkan data yang benar sebelum program melanjutkan proses.
+
+Contoh penerapannya
+
+<img width="504" height="146" alt="image" src="https://github.com/user-attachments/assets/e73cb881-def0-4ca3-a746-48c64a45f6e5" />
+
+Validasi input diterapkan pada pemilihan kode kelas baru saat proses pembaruan kelas santri untuk memastikan bahwa kode kelas yang dimasukkan pengguna berupa angka. Jika pengguna memasukkan huruf, teks, atau simbol, program menampilkan pesan kesalahan dan meminta input kembali sampai data yang dimasukkan sesuai.
